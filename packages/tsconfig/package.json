@@ -1,0 +1,12 @@
+{
+    "name": "@nikium/tsconfig",
+    "version": "0.0.0",
+    "private": true,
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        "./react-library.json": "./react-library.json",
+        "./base.json": "./base.json"
+    }
+}

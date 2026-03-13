@@ -1,0 +1,13 @@
+FROM python:3.11-alpine
+
+# Create non-root user
+RUN adduser -D sandbox
+
+# Set working directory
+WORKDIR /workspace
+RUN chown -R sandbox:sandbox /workspace
+
+USER sandbox
+
+# Keep container alive and run the command given by worker
+ENTRYPOINT ["python", "main.py"]
